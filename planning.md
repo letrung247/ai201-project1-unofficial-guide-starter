@@ -41,11 +41,11 @@ This project creates an unofficial guide to dining at Augustana College. It comb
      numbers fit the structure of your documents.
      A review-heavy corpus warrants different chunking than a long FAQ. -->
 
-**Chunk size:** 400 tokens (~1,200–1,500 characters)
+**Chunk size:** 225 tokens (~800 characters) — *revised down from 400 tokens during implementation*
 
-**Overlap:** 75 tokens (~225–300 characters, ~19% overlap)
+**Overlap:** 40 tokens (~150 characters, ~19% overlap) — *revised down from 75 tokens*
 
-**Reasoning:** Your corpus mixes structured (FAQs, menus, official pages) and unstructured (Reddit discussions, blog posts) content. A 400-token chunk is large enough to capture complete FAQ Q&A pairs or meaningful dining-related discussion threads, but small enough to avoid mixing multiple unrelated topics. The 75-token overlap preserves context when a dining recommendation or meal plan detail spans chunk boundaries. This strategy balances semantic coherence for FAQ-style queries while keeping Reddit and blog chunks focused enough for precise retrieval.
+**Reasoning:** Your corpus mixes structured (FAQs, menus, official pages) and unstructured (Reddit discussions, blog posts) content. The original plan called for 400-token chunks, but the documents turned out to be short and topically dense (1–4 KB each). At 400 tokens, a single chunk merged 5–6 distinct FAQ Q&A pairs into one embedding and the whole corpus produced only 26 chunks across 10 documents — below the 50-chunk guideline — so specific queries (e.g. "dietary accommodations", "weekend hours") matched coarsely against chunks covering many topics. Reducing to ~225 tokens / 800 characters isolates one or two FAQ pairs / discussion points per chunk while keeping narrative paragraphs intact, and yields 46 chunks (avg 646 chars, range 291–798). The ~19% overlap (40 tokens) preserves context when a meal-plan detail or hours block spans a boundary. A character-based recursive splitter (paragraph → sentence → word) is used in place of the LangChain RecursiveCharacterTextSplitter from the diagram, avoiding an extra dependency while reproducing the same boundary-respecting behavior.
 
 ---
 

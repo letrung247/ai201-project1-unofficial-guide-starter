@@ -1,0 +1,35 @@
+Augie Dining Menu Schedule 
+
+The Augustana Dining Menu Schedule is a digital web-based interface designed to help students and users browse, filter, and search dining options across campus in real 
+time. Instead of displaying a static list of meals, the system functions as a dynamic database viewer where menu items are organized by date, dining location, meal 
+period, and dietary category.
+
+At the top of the page, the system title “AUGUSTANA DINING MENU SCHEDULE” is displayed along with a QR code. This QR code allows users to quickly access the page on a 
+mobile device, making it easy to check menus while on campus. Users are encouraged to scan the QR code and bookmark the page for repeated access. The interface is 
+designed to be mobile-friendly and supports frequent use throughout the week.
+
+Below the header, the system provides a set of instructions explaining how to interact with the menu tool. Users can search for specific food items using a search bar 
+(for example, typing “pizza” to see all pizza-related items). The system also supports date-based queries, where users can enter a specific date in month/day format 
+(such as 06/15) to view menu items available on that day only. This makes it possible to quickly locate what is being served without browsing the entire menu manually.
+
+The system also includes functionality to export the currently viewed menu into a CSV file. This allows users to download the data and open it in spreadsheet software 
+such as Excel for further organization or planning. This feature is especially useful for users who want to track meals over time or analyze dining patterns.
+
+A key feature of the interface is visual highlighting: menu items for the current day are marked in blue. This helps users immediately distinguish today’s offerings 
+from other dates in the dataset, improving readability and navigation efficiency.
+
+Under the “Quick Filter Buttons” section, users are provided with preset navigation options. These include time-based filters such as “Today,” “This Week,” and
+“Next Week,” which automatically adjust the visible menu data. Additional meal-type filters include “Breakfast,” “Lunch,” “Dinner,” and “Brunch,” allowing users to narrow results based on meal periods. These filters reduce the need for manual searching and improve usability for frequent users.
+
+The system also supports dietary and allergen-based filtering. Users can toggle options such as Vegetarian (VGT), Gluten Free (GF), Vegan (V), Shellfish Alert, Tree 
+Nut Alert, and Peanut Alert. These filters allow users with dietary restrictions or preferences to quickly identify safe food options without manually scanning each 
+menu entry.
+
+A keyword search bar is also provided below the filters, enabling users to search the full dataset for specific terms. This is useful for locating individual menu items,
+ingredients, or cuisine types across multiple dining locations and dates.
+
+The main data table area beneath the controls is structured by date and menu entries. Each row corresponds to a specific dining station, meal type, and menu item. 
+However, in the current view shown, the table displays “No data,” indicating that no menu entries are currently loaded or that a filter selection has not returned results.
+
+Overall, this system serves as a structured navigation and filtering tool rather than a static menu list. It organizes dining data into a searchable and filterable 
+format, enabling users to efficiently find food options across multiple campus dining locations, dates, and dietary categories.
