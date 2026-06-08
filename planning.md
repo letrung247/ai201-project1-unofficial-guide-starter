@@ -122,8 +122,21 @@ This project creates an unofficial guide to dining at Augustana College. It comb
      "I'll give Claude my Chunking Strategy section and ask it to implement chunk_text()
      with my specified chunk size and overlap" is a plan. -->
 
-**Milestone 3 — Ingestion and chunking:**
+**Milestone 3 — Ingestion and chunking:** Use Claude. Input: the Documents and
+Chunking Strategy sections above plus the pipeline diagram. Expect: `ingest.py`
+that loads the `data/*.txt` files, cleans them (HTML/entities/whitespace), and
+chunks them to the specified size/overlap with source metadata. Verify by
+printing 5 representative and 5 random chunks and checking the chunk count and
+that each chunk is self-contained.
 
-**Milestone 4 — Embedding and retrieval:**
+**Milestone 4 — Embedding and retrieval:** Use Claude. Input: the Retrieval
+Approach section and diagram. Expect: `embed.py` that embeds chunks with
+all-MiniLM-L6-v2, stores them in ChromaDB with source metadata, and a
+`retrieve(query, k=6)` function. Verify by running 3 eval queries and checking
+top-result distances are below 0.5 and chunks are on-topic.
 
-**Milestone 5 — Generation and interface:**
+**Milestone 5 — Generation and interface:** Use Claude. Input: the grounding
+requirement (context-only answers + source attribution) and the Gradio
+skeleton. Expect: `query.py` with a grounded `ask()` and `app.py` Gradio UI.
+Verify by checking the system prompt enforces grounding, attribution is
+programmatic, and an out-of-domain question is declined.
